@@ -1,0 +1,14 @@
+{%extends "base3.html"%}
+{%block title%} user page{%endblock%}
+
+{%block content%}
+<h1>This is user {{u}} page</h1>
+{%with messages = get_flashed_messages()%}
+	{% if messages%}
+		{%for msg in messages%}
+			<h5>{{msg}}</h5>
+		{%endfor%}
+	{%endif%}
+{%endwith%}
+
+{%endblock%}
